@@ -1,5 +1,5 @@
 {
-  "name": "boost-ts.types",
+  "name": "boost-ts.utils",
   "version": "0.0.1",
   "description": "TypeScript Types to boost functional programming",
   "main": "index.js",
