@@ -1,8 +1,6 @@
 # boost-ts.utils
 
-TypeScript Library to boost functional programming
-
-This library includes useful generic type functions working for TypeScript types (not value), e.g. push/pop/zip for type tuples, and useful general type-safe functions that returns complicated types.
+TypeScript Library to boost typed programming
 
 <p align="center">
   <a href="https://github.com/ryokat3/boost-ts.utils">
@@ -10,16 +8,7 @@ This library includes useful generic type functions working for TypeScript types
   </a>
 </p>
 
-- Function Library
-
-  - **partial** : type-safe partial parameter binding similar to C++ boost library
-  - **mkobjmap** : type-safe map function for key-value object
-  - **mergeobj** : type-safe recursive merge function for key-value object
-  - **bundle** : type-safe partial parameter binding for multiple functions
-
-## Function Library
-
-### partial
+## partial
 
 This library offers a partial function call with flexible argument binding. Of course, it's __type safe__.
 
@@ -39,7 +28,7 @@ const reverse_sub = partial(sub, _2, _1)  // type :: (a:number, b:number)=>numbe
 console.log(reverse_sub(10, 100))         // output is 90
 ```
 
-### mkobjmap
+## mkobjmap
 
 Type-safe map for object.
 
@@ -101,7 +90,7 @@ chai.assert.equal(dataBox.name.value, data.name)
 chai.assert.equal(dataBox.age.value, data.age)
 ```
 
-### bundle
+## bundle
 
 Supposed we have an interface for set of file operations,
 
@@ -136,7 +125,7 @@ import { bundle } from "boost-ts"
 const curriedFileOper:CurriedFileOper = bundle(config, fileOper)
 ```
 
-### mergeobj
+## mergeobj
 
 Type-safe merge of key-value objects
 
